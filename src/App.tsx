@@ -22,11 +22,11 @@ import MoonbeamIcon from "./components/logos/MoonbeamIcon";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Button } from "./components/ui/button";
 
 interface ItemContentProps {
   children?: JSX.Element;
@@ -104,7 +104,7 @@ function ContextMenuLocal({ children }: ContextMenuLocalProps) {
                 />
               </ItemContent>
               <ContextMenuSeparator />
-              <DialogTrigger>
+              <DialogTrigger className="w-full">
                 <ItemContent label="5EZr...25Kd">
                   <Identicon
                     value="5EZrUD2S9ZyXPbZj88Ruu6ZdWCDYnxsu8sD37JW2tAU125Kd"
@@ -153,6 +153,14 @@ function ContextMenuLocal({ children }: ContextMenuLocalProps) {
               />
               <span className="font-medium">DOT</span>
             </div>
+          </div>
+          <div className="flex items-center w-full gap-4">
+            <Button variant="outline" className="w-full rounded-full">
+              Cancel
+            </Button>
+            <Button className="w-full bg-fill-primary hover:bg-fill-primaryHover rounded-full">
+              Send
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
