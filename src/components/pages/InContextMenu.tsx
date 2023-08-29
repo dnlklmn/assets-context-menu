@@ -24,9 +24,9 @@ import {
   DialogTrigger,
   DialogContent,
   DialogTitle,
-} from "@radix-ui/react-dialog";
-import { Button } from "../ui/Button";
-import { DialogHeader } from "../ui/Dialog";
+  DialogHeader,
+} from "../../components/ui/Dialog.tsx";
+import { Button } from "../../components/ui/Button.tsx";
 
 interface ItemContentProps {
   children?: JSX.Element;

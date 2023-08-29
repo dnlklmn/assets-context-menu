@@ -20,6 +20,14 @@ import {
 } from "../../components/Icons";
 
 import Identicon from "@polkadot/react-identicon";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../../components/ui/Dialog.tsx";
+import { Button } from "../../components/ui/Button.tsx";
 
 interface ItemContentProps {
   children?: JSX.Element;
