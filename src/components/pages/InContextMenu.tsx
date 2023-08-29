@@ -7,7 +7,7 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/components/ui/ContextMenu";
+} from "../../components/ui/ContextMenu";
 
 import {
   PolkadotCircle,
@@ -24,7 +24,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/Dialog";
+} from "../../components/ui/Dialog";
 import { Button } from "../../components/ui/Button";
 import Identicon from "@polkadot/react-identicon";
 
