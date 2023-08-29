@@ -1,7 +1,7 @@
 import "../app/globals.css";
-import "../app/global.css";
-import "../app/light.css";
-import "../app/dark.css";
+import "polkadot-theme/global.css";
+import "polkadot-theme/light.css";
+import "polkadot-theme/dark.css";
 import {
   ContextMenu,
   ContextMenuContent,
@@ -11,13 +11,15 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/components/ui/context-menu";
-import PolkadotIcon from "./components/logos/PolkadotIcon";
-import AcalaIcon from "./components/logos/AcalaIcon";
-import HydraIcon from "./components/logos/HydraIcon";
-import Identicon from "@polkadot/react-identicon";
-import AddIcon from "./components/logos/AddIcon";
-import MoonbeamIcon from "./components/logos/MoonbeamIcon";
+} from "@/components/ui/ContextMenu";
+
+import {
+  PolkadotCircle,
+  AcalaCircle,
+  MoonbeamCircle,
+  HydraCircle,
+  AddIcon,
+} from "./components/Icons";
 
 import {
   Dialog,
@@ -25,8 +27,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "./components/ui/button";
+} from "@/components/ui/Dialog";
+import { Button } from "./components/ui/Button";
+import { Header } from "./components/ui/Header";
+import Identicon from "@polkadot/react-identicon";
 
 interface ItemContentProps {
   children?: JSX.Element;
@@ -48,7 +52,7 @@ function ItemContent({ children, label }: ItemContentProps) {
 
 function TokenLine({ children, currency, amount }: ItemContentProps) {
   return (
-    <div className="w-full flex items-center px-2 rounded-md py-1 hover:bg-pGray-100 justify-between">
+    <div className="w-full flex items-center px-2 rounded-md py-1 hover:bg-fill-selected justify-between">
       <div className="w-full flex items-center gap-2 ">
         {children}
         <span>{currency?.toUpperCase()}</span>
@@ -75,21 +79,21 @@ function ContextMenuLocal({ children }: ContextMenuLocalProps) {
             <ContextMenuSubTrigger>Teleport to</ContextMenuSubTrigger>
             <ContextMenuSubContent>
               <ItemContent label="Assets Hub">
-                <PolkadotIcon />
+                <PolkadotCircle />
               </ItemContent>
               <ContextMenuSeparator />
               <ItemContent label="Polkadot Relay Chain">
-                <PolkadotIcon />
+                <PolkadotCircle />
               </ItemContent>
               <ItemContent label="Acala">
-                <AcalaIcon />
+                <AcalaCircle />
               </ItemContent>
               <ItemContent label="HydraDX">
-                <HydraIcon />
+                <HydraCircle />
               </ItemContent>
               <ContextMenuSeparator />
               <ItemContent label="Ethereum (through bridge)">
-                <HydraIcon />
+                <HydraCircle />
               </ItemContent>
             </ContextMenuSubContent>
           </ContextMenuSub>
@@ -170,24 +174,25 @@ function ContextMenuLocal({ children }: ContextMenuLocalProps) {
 
 function App() {
   return (
-    <div className="h-screen flex flex-col items-center bg-background-default">
-      <div className="flex flex-col p-4 gap-2 w-1/2 m-12 rounded-lg text-lg font-medium overflow-hidden shadow-md bg-background-float">
+    <div className="h-screen flex flex-col items-center bg-background-default text-foreground-contrast">
+      <Header />
+      <div className="flex flex-col p-4 gap-2 w-1/2 m-12 rounded-lg text-lg font-medium overflow-hidden bg-background-float shadow-[inset_0_0_1px_1px_rgba(0,0,0,0.07)] dark:shadow-[inset_0_0_1px_1px_rgba(255,255,255,0.05)]">
         <span className="text-lg px-2 font-medium my-4">
           Polkadot Assets Hub
         </span>
         <ContextMenuLocal>
           <TokenLine currency="DOT" amount="142.3901">
-            <PolkadotIcon />
+            <PolkadotCircle />
           </TokenLine>
         </ContextMenuLocal>
         <ContextMenuLocal>
           <TokenLine currency="GLMR" amount="73.8311">
-            <MoonbeamIcon />
+            <MoonbeamCircle />
           </TokenLine>
         </ContextMenuLocal>
         <ContextMenuLocal>
           <TokenLine currency="ACA" amount="0.2506">
-            <AcalaIcon />
+            <AcalaCircle />
           </TokenLine>
         </ContextMenuLocal>
       </div>
