@@ -26,12 +26,12 @@ export function PolkadotIcon({ size, className }: IconProps) {
 }
 
 // simple icons
-export function AddIcon() {
+export function AddIcon({ size, className }: IconProps) {
   return (
     <svg
+      className={className}
+      width={size ? size : "24"}
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
       fill="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -42,6 +42,28 @@ export function AddIcon() {
         fillRule="evenodd"
         stroke="none"
         d="M1 14c0 7.18 5.82 13 13 13s13-5.82 13-13S21.18 1 14 1 1 6.82 1 14zm12.968 5.685a1 1 0 001.005-.995l.023-4.196 4.194.023a1 1 0 00.01-2l-4.193-.023.023-4.193a1 1 0 10-2-.011l-.023 4.193-4.196-.023a1 1 0 10-.01 2l4.195.023-.023 4.196a1 1 0 00.995 1.006z"
+        clipRule="evenodd"
+      ></path>
+    </svg>
+  );
+}
+
+export function MoreIcon({ size, className }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      width={size ? size : "24"}
+      fill="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 28 28"
+    >
+      <path
+        fillRule="evenodd"
+        stroke="none"
+        d="M6.703 11.958a3.355 3.355 0 10-4.745 4.745 3.355 3.355 0 004.745-4.745zm9.67 0a3.355 3.355 0 10-4.745 4.744 3.355 3.355 0 004.744-4.744zm9.669 0a3.355 3.355 0 10-4.745 4.745 3.355 3.355 0 004.745-4.745z"
         clipRule="evenodd"
       ></path>
     </svg>
@@ -133,6 +155,51 @@ export function PolkadotCircle() {
       <g fill="#fff" mask="url(#mask0_128_1507)">
         <path d="M11.921 7.524c1.708 0 3.093-.805 3.093-1.798s-1.385-1.798-3.093-1.798-3.093.805-3.093 1.798 1.385 1.798 3.093 1.798zM11.921 21.07c1.708 0 3.093-.805 3.093-1.798 0-.992-1.385-1.797-3.093-1.797s-3.093.804-3.093 1.797c0 .993 1.385 1.798 3.093 1.798zM7.61 10.013c.855-1.479.85-3.08-.012-3.577-.86-.497-2.25.3-3.105 1.778-.854 1.478-.849 3.08.012 3.576.861.497 2.252-.299 3.106-1.777zM19.348 16.785c.854-1.478.849-3.08-.012-3.576-.86-.496-2.25.3-3.104 1.778-.854 1.479-.849 3.08.011 3.576.86.497 2.25-.3 3.105-1.778zM7.599 18.563c.86-.497.866-2.098.012-3.577-.854-1.478-2.244-2.274-3.105-1.777-.861.496-.867 2.098-.013 3.576.855 1.479 2.245 2.274 3.106 1.777zM19.338 11.79c.86-.496.865-2.097.011-3.575-.854-1.479-2.244-2.275-3.104-1.778-.86.496-.866 2.097-.012 3.575.855 1.479 2.244 2.275 3.105 1.779z"></path>
       </g>
+    </svg>
+  );
+}
+
+export function EthereumCircle() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="#627EEA"
+        d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z"
+      ></path>
+      <path
+        fill="#fff"
+        fillOpacity="0.602"
+        d="M12.374 2.998v6.653l5.623 2.513-5.623-9.166z"
+      ></path>
+      <path
+        fill="#fff"
+        d="M12.374 2.998l-5.623 9.166 5.623-2.513V2.998z"
+      ></path>
+      <path
+        fill="#fff"
+        fillOpacity="0.602"
+        d="M12.374 16.474v4.521L18 13.21l-5.626 3.264z"
+      ></path>
+      <path
+        fill="#fff"
+        d="M12.374 20.995v-4.52L6.751 13.21l5.623 7.785z"
+      ></path>
+      <path
+        fill="#fff"
+        fillOpacity="0.2"
+        d="M12.374 15.428l5.623-3.264-5.623-2.513v5.777z"
+      ></path>
+      <path
+        fill="#fff"
+        fillOpacity="0.602"
+        d="M6.751 12.164l5.623 3.264V9.651L6.75 12.164z"
+      ></path>
     </svg>
   );
 }
