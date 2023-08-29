@@ -18,15 +18,15 @@ import {
   EthereumCircle,
 } from "../../components/Icons";
 
+import Identicon from "@polkadot/react-identicon";
 import {
   Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
-} from "../../components/ui/Dialog.tsx";
-import { Button } from "../../components/ui/Button.tsx";
-import Identicon from "@polkadot/react-identicon";
+  DialogContent,
+  DialogTitle,
+} from "@radix-ui/react-dialog";
+import { Button } from "../ui/Button";
+import { DialogHeader } from "../ui/Dialog";
 
 interface ItemContentProps {
   children?: JSX.Element;
