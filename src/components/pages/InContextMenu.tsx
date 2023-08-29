@@ -24,8 +24,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../components/ui/Dialog";
-import { Button } from "../../components/ui/Button";
+} from "../../components/ui/Dialog.tsx";
+import { Button } from "../../components/ui/Button.tsx";
 import Identicon from "@polkadot/react-identicon";
 
 interface ItemContentProps {
