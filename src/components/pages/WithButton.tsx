@@ -17,7 +17,7 @@ import {
   AddIcon,
   MoreIcon,
   EthereumCircle,
-} from "../../components/Icons";
+} from "@/components/Icons";
 
 import Identicon from "@polkadot/react-identicon";
 import {
@@ -26,8 +26,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../components/ui/Dialog.tsx";
-import { Button } from "../../components/ui/Button.tsx";
+} from "@/components/ui/Dialog";
+import { Button } from "@/components/ui/Button";
 
 interface ItemContentProps {
   children?: JSX.Element;
