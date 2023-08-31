@@ -25,8 +25,8 @@ import {
   DialogContent,
   DialogTitle,
   DialogHeader,
-} from "@/components/ui/Dialog";
-import { Button } from "@/components/ui/Button";
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 interface ItemContentProps {
   children?: JSX.Element;
